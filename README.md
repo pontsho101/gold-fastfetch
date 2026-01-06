@@ -19,7 +19,7 @@ bash <(curl -sL https://raw.githubusercontent.com/Lucenx9/gold-fastfetch/main/in
 
 - **Auto GPU detection** - Nvidia (VRAM & Temp), AMD/Intel support
 - **Auto disk detection** - Filesystem labels, colored progress bars (excludes network drives)
-- **Update checker** - Cached pacman/AUR update counts (Arch Linux)
+- **Update checker** - Cached pacman + AUR (Yay/Paru) update counts
 - **Icon toggle** - Auto-detects Nerd Fonts, with manual override
 - **Smart backups** - Automatic backup rotation (keeps last 5)
 - **Media Ready** - Shows Now Playing & Player status (Spotify, VLC, etc.)
@@ -28,7 +28,8 @@ bash <(curl -sL https://raw.githubusercontent.com/Lucenx9/gold-fastfetch/main/in
 
 ## Compatibility
 
-- **OS**: Optimized for **Arch Linux** (Update module requires `pacman`).
+- **OS**: Optimized for **Arch Linux** (`pacman` needed for repo updates).
+- **AUR**: Auto-detects `yay` or `paru` for AUR update counts.
 - **Terminal**: Requires a Nerd Font for icons (optional).
 - **GPU**: Detailed stats (VRAM/Temp) supported on NVIDIA. Intel/AMD show model/shared status.
 
