@@ -330,13 +330,13 @@ if [[ $USE_ICONS -eq 1 ]]; then
     I_UPD="󰚰 "; I_PKG="󰏖 "; I_AUR="󰣇 "; I_SH="󰟤 "; I_LOC="󰗊 "; I_DE="󰍹 "; I_WM="󰖩 "
     I_TERM=" "; I_FONT="󰛖 "; I_CPU="󰻠 "; I_GPU="󰢮 "; I_RAM="󰍛 "; I_SWAP="󰓡 "
     I_DISK="󰋊 "; I_DISP="󰍹 "; I_AUD="󰓃 "; I_THM="󰉼 "; I_ICO="󰀻 "; I_CUR="󰇀 "
-    I_PAD="󰊗 "; I_IP="󰩟 "; I_PLAY="󰎈 "; I_MEDIA="󰝚 "; I_PAL="󰸱 "
+    I_PAD="󰊗 "; I_IP="󰩟 "; I_PLAY="󰎈 "; I_MEDIA="󰝚 "; I_PAL="󰸱 "; I_BAT="󰁹 "
 else
     I_USER=""; I_HOST=""; I_TIME=""; I_OS=""; I_KER=""; I_UP=""
     I_UPD=""; I_PKG=""; I_AUR=""; I_SH=""; I_LOC=""; I_DE=""; I_WM=""
     I_TERM=""; I_FONT=""; I_CPU=""; I_GPU=""; I_RAM=""; I_SWAP=""
     I_DISK=""; I_DISP=""; I_AUD=""; I_THM=""; I_ICO=""; I_CUR=""
-    I_PAD=""; I_IP=""; I_PLAY=""; I_MEDIA=""; I_PAL=""
+    I_PAD=""; I_IP=""; I_PLAY=""; I_MEDIA=""; I_PAL=""; I_BAT=""
 fi
 
 cat << EOF > "$CONFIG_DIR/config.jsonc"
@@ -381,6 +381,7 @@ cat << EOF > "$CONFIG_DIR/config.jsonc"
     { "type": "command", "key": "│ ${I_GPU}GPU", "keyColor": "green", "text": "bash \"$CONFIG_DIR/gpu_detect.sh\"" },
     { "type": "memory", "key": "│ ${I_RAM}RAM", "keyColor": "green", "format": "{used} / {total} ({percentage})" },
     { "type": "swap", "key": "│ ${I_SWAP}Swap", "keyColor": "green", "format": "{used} / {total} ({percentage})" },
+    { "type": "battery", "key": "│ ${I_BAT}Battery", "keyColor": "green", "format": "{capacity}% ({status})" },
     { "type": "command", "key": "│ ${I_DISK}Disks", "keyColor": "green", "text": "bash \"$CONFIG_DIR/disk_detect.sh\"" },
 
     { "type": "custom", "format": "├──────────────────────────────────────────────────────────", "outputColor": "blue" },
