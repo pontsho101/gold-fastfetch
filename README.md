@@ -9,6 +9,12 @@
 
 A feature-rich, self-contained Fastfetch configuration installer for Arch Linux.
 
+### ⚡ Quick Install
+One-line command (safe & easy):
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/Lucenx9/gold-fastfetch/main/install.sh)
+```
+
 ## Features
 
 - **Auto GPU detection** - Nvidia (VRAM & Temp), AMD/Intel support
@@ -72,3 +78,21 @@ Only the last 5 backups are kept.
 ## License
 
 Unlicense / Public Domain
+
+## Technical Details 🛠️
+
+### 🚀 Smart Caching (updates.sh)
+- **Problem**: Running `checkupdates` or `yay` on every term launch is slow.
+- **Solution**: The script creates a cache file with a **30-minute TTL**.
+- **Smart Invalidation**: It checks `/var/lib/pacman/local`. If you update your system, the cache is **instantly invalidated**, ensuring you always see real-time data without performance penalties.
+
+### 💾 Dynamic Disk Detection (disk_detect.sh)
+- **Problem**: Hardcoding disk paths (`/`, `/home`) fails on multi-drive setups.
+- **Solution**: The script uses `findmnt` to dynamically discover **real** physical partitions.
+- **Filtering**: Automatically excludes pseudo-filesystems (`tmpfs`, `overlay`, `/boot`, `/run`).
+- **Visuals**: Generates color-coded storage bars directly in Bash.
+
+### ⚡ Installation Logic
+1. **Safety First**: Checks for `root` (blocks execution), verifies `Arch Linux` via `/etc/arch-release`.
+2. **Backups**: Automatically backs up existing configs to `~/.local/state/fastfetch/backups/`.
+3. **Generation**: The `.jsonc` config is **generated at runtime**, allowing it to inject variables (like Icons ON/OFF) based on your choices.

@@ -297,7 +297,7 @@ while IFS= read -r line; do
     [[ "$mount" =~ ^/proc ]] && continue
     [[ "$mount" =~ ^/var ]] && continue
     [[ "$mount" =~ \.snapshots ]] && continue
-    [[ "$mount" == "/home" ]] && continue
+    # [[ "$mount" == "/home" ]] && continue
 
     # Deduplicate btrfs subvolumes by size
     if [[ "$fstype" == "btrfs" ]]; then
