@@ -1,5 +1,10 @@
 # Gold Fastfetch Config
 
+![License](https://img.shields.io/github/license/Lucenx9/gold-fastfetch?style=for-the-badge&color=gold)
+![Shell](https://img.shields.io/badge/Shell-Bash-goldenrod?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![OS](https://img.shields.io/badge/OS-Arch%20Linux-1793d1?style=for-the-badge&logo=arch-linux&logoColor=white)
+![Fastfetch](https://img.shields.io/badge/Fastfetch-v2+-blueviolet?style=for-the-badge)
+
 ![Preview](assets/preview.png)
 
 A feature-rich, self-contained Fastfetch configuration installer for Arch Linux.
